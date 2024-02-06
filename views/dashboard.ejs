@@ -1,0 +1,38 @@
+<%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
+
+        <div class="container">
+            <div class="top">
+                <h1 class="heading">Welcome <%= locals.user.username %></h1>
+                <%- include('./partials/dashnav.ejs') %>
+            </div>
+            
+            <div class="analytics">
+                <div class="cont">
+                    <div class="box">
+                        <h3>Totals Blogs</h3>
+                        <h1><%= locals.blogs.length %></h1>
+                        
+                    </div>
+
+                </div>
+                <div class="cont">
+                    <div class="box">
+                        <h3>Totals Views</h3>
+                        <h1><%= locals.totalViewsCount %></h1>
+                    </div>
+
+                </div>
+                <div class="cont">
+                    <div class="box">
+                        <h3>Totals Comments</h3>
+                        <h1><%= locals.comments.length %></h1>
+                    </div>
+
+                </div>
+            </div>
+           
+        </div>
+
+
+        <%- include('./partials/footer.ejs') %>

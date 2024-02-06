@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
+
+
+
+        <div class="home_container">
+                <div class="form-container">
+                    <h1>Add Blog</h1>
+                    <form action="/addblog" method="post" enctype="multipart/form-data">
+                        <div class="input_field">
+                            <label for="name">Title</label>
+                            <input type="text" id="name" placeholder="Girish Rajora" name="title" />
+                        </div>
+
+                        <div class="input_field">
+                            <label for="description">Body</label>
+                            <textarea id="description" cols="30" rows="10" name="content"></textarea>
+                        </div>
+                        <div class="input_field">
+                            <label for="image">Cover Image</label>
+                            <input type="file" id="image" required name="image" >
+                        </div>
+                        <button type="submit" id="sub">Publish</button>
+
+                    </form>
+                </div>
+            </div>
+
+
+        <%- include('./partials/footer.ejs') %>

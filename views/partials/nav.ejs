@@ -1,0 +1,90 @@
+<header>
+    <div class="logo">
+        <a href="/">
+            <h1>blogX</h1>
+        </a>
+    </div>
+    <nav>
+        <li><a href="/">Blogs</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">Contact</a></li>
+    </nav>
+    <div class="btns">
+
+        <% if (locals.user) { %>
+            <div class="acnt">
+                <img src="<%= locals.user.image %>" alt="">
+            </div>
+            <% } else{ %>
+                <a href="/login"><button>Login</button></a>
+                <% } %>
+
+
+
+    </div>
+
+    <div class="res_nav">
+        <div class="menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+
+    <div class="responsive_nav">
+        <div class="navs">
+            <a href="/">
+                <li>Blogs</li>
+            </a>
+            <a href="/">
+                <li>About</li>
+            </a>
+            <a href="/">
+                <li>Contact</li>
+            </a>
+            <% if (!locals.user) { %>
+                <a href="/login">
+                    <li>Login</li>
+                </a>
+                <% } else{ %>
+            <a href="/dashboard">
+                <li>Dashboard</li>
+            </a>
+           
+            <a href="/addblog">
+                <li>Create Blog</li>
+            </a>
+            <a href="/logout">
+                <li>Logout</li>
+            </a>
+            <% } %>
+        </div>
+
+    </div>
+
+    <div class="menubar">
+        <a href="/dashboard">
+            <li>Dashboard</li>
+        </a>
+        <a href="/addblog">
+            <li>Create Blog</li>
+        </a>
+        <a href="/logout">
+            <li>Logout</li>
+        </a>
+    </div>
+</header>
+
+<script>
+    var res_nav = document.querySelector(".responsive_nav");
+    var menubar = document.querySelector(".menu");
+    // Menu Bar
+    menubar.addEventListener("click", () => {
+        menubar.classList.toggle("move");
+        res_nav.classList.toggle("navappr")
+    });
+
+
+ 
+
+</script>

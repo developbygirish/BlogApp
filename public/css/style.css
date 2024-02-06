@@ -1,0 +1,698 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(253, 251, 244);
+position: relative;
+
+
+}
+
+.logo h1{
+    color: black;
+}
+
+.form_container {
+    border: 2px solid rgb(255, 148, 148);
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgba(255, 243, 222, 0.24);
+    scale: 1.1;
+}
+
+.form_container .input_field {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px 0;
+    padding: 6px;
+    border-radius: 3px;
+    border: none;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+input:focus {
+    border: 1px solid rgb(255, 169, 111);
+    outline: none;
+    background: rgba(255, 245, 226, 0.616);
+}
+
+.form_container h1 {
+    margin-bottom: 10px;
+}
+
+#sub {
+    background-color: salmon;
+    color: white;
+    border: 2px solid salmon;
+    cursor: pointer;
+}
+
+#sub:hover {
+    background-color: rgb(255, 167, 167);
+}
+
+.form_container p {
+    margin: 5px 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.updateWrapper{
+    height: 500px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+    height: 75px;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+header nav a {
+    font-weight: 700;
+    color: rgb(167, 167, 167);
+    /* color: black; */
+    position: relative;
+    padding: 0 10px;
+    /* color: salmon; */
+
+}
+
+header nav a:hover{
+    color: salmon;
+}
+
+header .btns a button {
+    padding: 10px 13px;
+    background-color: salmon;
+    border: 2px solid salmon;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+header nav a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: salmon;
+    bottom: -10px;
+    left: 0px;
+
+}
+
+
+header nav a:hover::before {
+    width: 100%;
+    transition: 1s ease;
+}
+
+.acnt {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    border: 1px solid salmon;
+overflow: hidden;
+}
+
+.acnt img {
+    width: 100%;
+}
+
+.menubar {
+    position: absolute;
+    scale: 0;
+    background-color: white;
+    padding: 10px;
+    bottom: -150%;
+    right: 5%;
+    border: 2px solid rgb(255, 185, 177);
+    border-radius: 10px;
+    transform-origin: top right;
+    transition: .2s ease;
+}
+
+.menubar li {
+    padding: 5px;
+
+    border-radius: 4px;
+}
+
+.menubar a {
+    color: grey;
+
+}
+
+
+.menubar li:hover {
+    background-color: rgb(255, 233, 231);
+}
+
+
+.form-container {
+    border: 2px solid rgb(231, 231, 231);
+    width: 450px;
+    margin: auto;
+    padding: 10px;
+
+
+}
+
+.form-container h1 {
+    font-size: 38px;
+    text-align: center;
+}
+
+.form-container .input_field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    row-gap: 5px;
+}
+
+label {
+
+    font-weight: 700;
+}
+
+input,
+#description {
+    padding: 8px 5px;
+
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 8px;
+}
+
+input:focus,
+#description:focus {
+    outline: 2px solid rgb(170, 228, 255);
+    border: 2px solid rgb(235, 235, 235);
+}
+
+
+
+
+input#file-upload-button {
+    padding: 10px 5px;
+}
+
+/* #sub{
+    padding: 5px 10px;
+    background-color: salmon;
+    border: none;
+    height: 40px;
+   font-weight: bold;
+   font-size: 15px;
+    width: 50%;
+    border-radius: 6px;
+  cursor: pointer;
+
+ }
+
+ #sub:hover{
+    background-color: rgb(255, 150, 139); */
+
+.home_container {
+    padding: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: start;
+}
+
+
+
+.container .blogs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: start;
+}
+
+.container #heading{
+    font-size: 44px;
+}
+
+.container {
+    padding: 0 10%;
+    margin-top: 20px;
+}
+
+.container .analytics {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.container .heading{
+    font-size: 48px;
+    text-align: right;
+}
+
+.container .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.container .analytics .cont {
+    border: 2px solid salmon;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px salmon;
+}
+
+
+.box {
+    text-align: center;
+}
+
+.box h1 {
+    color: salmon;
+    font-size: 43px;
+}
+
+.box h3 {
+    color: grey;
+}
+
+.blog_container {
+    width: 270px;
+    border: 2px solid salmon;
+    border-radius: 10px;
+    background-color: rgb(255, 248, 242);
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.blog_container:hover {
+    box-shadow: 0 0 23px rgba(250, 128, 114, 0.493);
+}
+
+.blog_container .cover_image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 130px;
+}
+
+
+.blog_container .cover_image img {
+    width: 100%;
+}
+
+.blog_container button {
+    padding: 5px 10px;
+    background-color: salmon;
+    border: 2px solid salmon;
+    border-radius: 5px;
+    font-weight: 600;
+
+}
+
+.blog_container h5 {
+    margin: 5px 0;
+    color: black;
+    /* height: 45px; */
+    /* overflow: hidden; */
+}
+
+
+
+.blog_cont {
+    width: 750px;
+    margin: auto;
+}
+
+.blog_cont .img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.blog_cont img {
+    width: 100%;
+}
+
+.creator_det {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.creator_det .cre_img {
+    width: 50px;
+    height: 50px;
+border-radius: 50%;
+border: 2px solid salmon;
+overflow: hidden;
+}
+
+.creator_det .cre_img img {
+    width: 100%;
+  
+
+}
+
+.comments {
+    margin: 10px 0;
+}
+
+.comments form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#sub {
+    padding: 10px;
+}
+
+#com_inp {
+    width: 100%;
+}
+
+
+.comment_panel {
+    display: flex;
+    gap: 10px;
+margin-top: 20px;
+}
+
+.comment_img {
+    width: 50px;
+    height: 50px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid salmon;
+}
+
+.comment_img img {
+    width: 100%;
+ 
+}
+
+.comment_det {
+    width: 90%;
+}
+
+.options .btns {
+    padding: 8px 15px;
+
+    border: 2px solid salmon;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+}
+
+.active{
+    background-color: salmon;
+    color: white;
+}
+
+.options .btns:hover {
+    color: white;
+    background-color: rgb(255, 147, 135);
+    cursor: pointer;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+width: 40%;
+}
+
+
+.blog_container .btncon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+}
+
+#btn{
+    padding: 7px 10px ;
+    background-color: salmon;
+    border: 2px solid salmon;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#btn:hover{
+    background-color: rgb(255, 153, 142);
+}
+
+.else_Cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.center_cont
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center_cont_myblog{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error{
+    width: 100%;
+    border: 2px solid salmon;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 125, 125, 0.541);
+    text-align: center;
+    font-weight: 700;
+margin-bottom: 30px;
+scale: 1.1;
+}
+
+header  .res_nav, .responsive_nav{
+    display: none;
+}
+
+header  .res_nav .menu div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: .2s;
+border-radius: 10px ;
+}
+
+header  .res_nav  .menu {
+
+    height: 50px;
+    border-radius: 27px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    z-index: 1;
+
+}
+
+
+.move .line1 {
+    transform: rotate(-45deg) translate(-6px, 5px);
+
+}
+
+.move .line2 {
+    opacity: 0;
+}
+
+.move .line3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.responsive_nav{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 247, 231);
+    top: 0;
+   scale: 0;
+    right: -1000px;    
+    transition: .5s ease;
+    z-index: -1;
+}
+
+.responsive_nav .navs li{
+    color: rgb(156, 156, 156);
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.responsive_nav .navs li:hover{
+    color: salmon;
+}
+
+
+.navappr{
+    right: 0;
+  
+}
+
+
+
+
+@media screen and (min-width:10px) and (max-width:410px) {
+    .form_container {
+        scale: 1;
+    }
+}
+
+@media screen and (min-width:10px) and (max-width:694px) {
+   header nav, header .btns{
+    display: none;
+   }
+
+body, html{
+    overflow-x: hidden;
+}
+
+
+   header {
+    z-index: 10;
+   }
+
+   header  .res_nav{
+    display: block;
+}
+
+.home_container .blog_container{
+    margin-right: 0;
+    width: 100%;
+}
+
+
+.responsive_nav{
+    scale: 1;
+}
+
+.form-container{
+    width: 100%;
+}
+
+.container {
+    padding: 0 5%;
+    margin-top: 0;
+}
+
+.container .top{
+ flex-direction: column;    
+
+}
+
+.container .top h1{
+    text-align: left;
+    font-size: 49px;
+    margin-bottom: 10px;
+}
+
+.options{
+    width: 100%;
+    flex-wrap: wrap;
+    /* gap: 5px; */
+
+}
+
+.options a{
+    margin-bottom: 10px;
+}
+
+.container .analytics{
+    gap: 20px;
+}
+
+.container .analytics .cont{
+    width: 100%;
+}
+
+.updateWrapper{
+    height: 100%;
+}
+
+.center_cont_myblog{
+    height: 200px;
+}
+
+.blog_container{
+    width: 100%;
+    margin-right:0;
+}
+
+.comment_img {
+    width: 58px;
+}
+
+.error{
+    margin: 20px auto;
+    width: 90%;
+}
+
+
+}

@@ -1,0 +1,46 @@
+<%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
+
+        <div class="container">
+            <div class="top">
+                <h1 class="heading">My Blogs</h1>
+                <%- include('./partials/dashnav.ejs') %>
+            </div>
+            <div class="<% if (locals.posts.length>0) { %>
+             blogs
+            <% } else{%>
+                center_cont_myblog
+                <%}%>">
+                <% if (locals.posts.length>0) { %>
+                    <% posts.forEach(post=> { %>
+                        <a href="/blog/<%= post._id %>">
+                            <div class="blog_container">
+                                <div class="cover_image">
+                                    <img src="<%= post.image %>" alt="<%= post.image %>">
+                                </div>
+                                <h5>
+                                    <%= post.title %>
+                                </h5>
+                                <div class="btncon">
+                                    <a href="updateBlog/<%= post._id %>"><button>Update Blog</button></a>
+                                    <form method="POST" action="/deleteBlog/<%= post._id %>"><button>Delete
+                                            Blog</button></form>
+                                </div>
+
+                            </div>
+                        </a>
+
+                        <% }) %>
+                            <% } else {%>
+                                <div class="else_Cont">
+                                    <h1>You Have 0 Blogs</h1>
+                                    <a href="/addblog"><button id="btn">Create Blog</button></a>
+                                </div>
+
+                                <% }%>
+            </div>
+
+        </div>
+
+
+        <%- include('./partials/footer.ejs') %>

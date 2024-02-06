@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+<div class="wrapper">
+    <div class="min_cont">
+        <% if (locals.error) { %>
+            <div class="error">
+               <%= locals.error %>
+            </div>
+           <% } %>
+        <div class="form_container">
+            <h1>Log in</h1>
+            <form action="/login" method="post">       
+                <div class="input_field">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
+                </div>
+                <div class="input_field">
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" id="Password" placeholder="****">
+                </div>
+                <p>  Don't Have an accound ? <a href="/signup">Signup</a></p>
+                <input type="submit" value="Submit" id="sub">
+            </form>
+        </div>
+    </div>
+   
+</div>
+
+
+
+<%- include('./partials/footer.ejs') %>

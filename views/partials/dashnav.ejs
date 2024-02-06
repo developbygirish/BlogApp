@@ -1,0 +1,17 @@
+<div class="options">
+    <a href="/dashboard"><button class="btns ">Dashboard</button></a>
+    <a href="myblogs"><button class="btns ">My Blogs</button></a>
+    <a href="updateProfile"><button class="btns">Update Profile</button></a>
+    <a href="/logout"><button class="btns">Logout</button></a>
+</div>
+
+<script>
+    const btns=document.querySelector("btns");
+
+for(let btn of btns){
+    btn.onclick=(e)=>{
+    e.target.classList.add('active')
+}
+}
+
+</script>

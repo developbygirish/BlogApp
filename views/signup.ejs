@@ -1,0 +1,28 @@
+<%- include('./partials/header.ejs') %>
+<div class="wrapper">
+    <div class="form_container">
+        <h1>Sign up</h1>
+        <form action="/user" method="post" enctype="multipart/form-data">
+            <div class="input_field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="John Doe">
+            </div>
+            <div class="input_field">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="johndoe@gmail.com">
+            </div>
+            <div class="input_field">
+                <label for="password">Password</label>
+                <input type="text" name="password" id="password" placeholder="****">
+            </div>
+            <div class="input_field">
+                <label for="image">Profile Image</label>
+                <input type="file" name="image" id="image" >
+            </div>
+       
+            <p>  Already Have an accound ? <a href="/login">Login</a></p>
+            <input type="submit" value="Submit" id="sub">
+        </form>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>
