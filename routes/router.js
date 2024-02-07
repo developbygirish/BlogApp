@@ -21,6 +21,7 @@ const upload = multer({
 
 
 router.get('/', checkAuth, userControl.homepage)
+router.get('/about', checkAuth, userControl.aboutpage)
 router.get('/signup', userControl.signup)
 router.get('/login', userControl.login)
 router.get('/logout', userControl.logout)

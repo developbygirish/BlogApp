@@ -26,6 +26,13 @@ exports.addBlog = (req, res) => {
     })
 }
 
+exports.aboutpage = (req, res) => {
+
+    return res.render("about", {
+        user: req.user,
+    })
+}
+
 
 exports.updateBlog = async (req, res) => {
     try {
